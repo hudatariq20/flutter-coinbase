@@ -8,7 +8,7 @@ part 'data_model.g.dart';
 class DataModel{
     final int? id;
   final String? name;
-  final String? symbol;
+  final String symbol;
   final String? slug;
   final int? numMarketPairs;
   final String? dateAdded;

@@ -1,8 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:coinbase_clone/models/models.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CoinsWidgetList extends StatelessWidget{
+ final coinIconUrl =
+        "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/";
   final List<DataModel> coins;
   CoinsWidgetList({Key? key, required this.coins}) :super(key: key);
   @override
@@ -47,7 +51,12 @@ class CoinsWidgetList extends StatelessWidget{
                                                                           width: 96.0,
                                                                           child: Column(
                                                                             children: [
-                                                                              
+                                                                               Image(image: AssetImage('assets/btc.png'))
+                                                                               // CachedNetworkImage(imageUrl:'assets/images/btc.png',
+                                                                              //  placeholder: (context, url) => CircularProgressIndicator(),
+                                                                              //  errorWidget: (context,url, error ) => 
+                                                                              //                 SvgPicture.asset('assets/icons/dollar.svg'),
+                                                                              //   ),
                                                                             ],
                                                                           ),
                                                                         )
